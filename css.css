@@ -1,0 +1,341 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ *{
+
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+ }
+ body{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     background: #f7f7f7;
+ }
+ .wrapper{
+     background: #fff;
+     width: 450px;
+     border-radius: 16px;
+     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);}
+
+     .from {
+         padding:25px 30px ;
+     }
+     .from header{
+         font-size: 25px;
+         font-weight: 600;
+         padding-bottom: 10px;
+         border-bottom: 1px solid #e6e6e6;
+     }
+     .from from{
+         margin: 25px 0;
+
+     }
+     .error-tex{
+         color: #721c24;
+         background: #f8d7da;
+         padding: 8px 10px;
+         text-align: center;
+         border-radius: 5px;
+         margin-bottom: 10px;
+         border: 1px solid #f5c6cd;
+         display: none;
+     }
+     .field{
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 10px;
+         position: relative;
+     }
+     .field input{
+        outline: none;
+        
+    }
+    .name-detalis{
+        display: flex;
+    }
+    .name-detalis .field:first-child{
+        margin-right: 15px;
+    } 
+    .name-detalis .field:last-child{
+        margin-left: 15px;
+    } 
+    .field label{
+        margin-bottom: 2px;
+    }
+     .input input{
+         height: 40px;
+         width: 100%;
+         font-size: 16px;
+         padding: 0 10px;
+         border-radius: 5px;
+         border: 1px solid #ccc;
+     }
+     .image input{
+         font-size: 17px;
+     }
+     .button input{
+         margin-top: 13px;
+         height: 45px;
+         border: none;
+         font-size: 17px;
+         font-weight: 400;
+         background: #333;
+         color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+     #asae{
+         position: absolute;
+         right: 15px;
+         color: #ccc;
+         top: 70%;
+         transform: translateY(-50%);
+         cursor: pointer;
+     }
+     #asae.active::before{
+         color: #333;
+         content: "\f070";
+     }
+     .link{
+         text-align: center;
+         margin:10px 0;
+         font-size: 17px;
+
+     }
+     .link a{
+         color: #333;
+
+     }
+     .link a:hover{
+         text-decoration:underline ;
+     }
+     /* users css ariay */
+
+.users{
+    padding: 25px 30px;
+}
+
+
+.users header,
+.users-list a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ad7474;
+
+}
+.wrapper img{
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+.content img{
+    height: 50px;
+    width: 50px;
+   
+}
+
+:is(.users, .users-list, .chat-area) .content{
+    display: flex;
+    align-items: center;
+}
+:is(.users, .users-list, .chat-area) .details{
+    margin-left: 15px;
+    color: #000;
+}
+:is(.users, .users-list, .chat-area) .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.logout{
+    font-size: 17px;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    padding: 7px 15px;
+}
+.search{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+     
+}
+.text{
+   font-size: 18px; 
+}
+.search input{
+    position: absolute;
+    height: 42px;
+    width: calc(95% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.search input.alhasan{
+    opacity:1;
+    pointer-events: auto;
+     
+}
+
+.search button{
+    width: 42px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #333;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+.search button.active{
+    background: #333;
+    color: #fff;
+}
+.search button.active i::before{
+    content: "\f00d";
+}
+.users-list{
+    max-height: 350px;
+    overflow-y: auto;
+
+}
+:is(.users-list, .chat-box)::-webkit-scrollbar{
+    width: 0;
+}
+.users-list a .content p{
+    color: #67676a;
+} 
+.users-list a{
+    padding-right: 15px;
+    page-break-after: 10px;
+    margin-bottom: 15px;
+    border-block-color: #f1f1f1;
+
+}
+.users-list a:last-child{
+    border: none;
+    margin-bottom: 0;
+
+}
+.users-list a .content img{
+     height: 40px;
+     width: 40px;
+}
+.users-list a .status-dot{
+    font-size: 12px;
+    color: #08eb84;
+}
+/* we use this class name in php to show offline status */
+.users-list a .status-dot .offline{
+    color: #ccc;
+}
+/* chat-area css */
+.chat-area  header{
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+.chat-area  header  img{
+    height: 50px;
+    width: 50px;
+   
+}
+.blck-icon{
+    font-size: 18px;
+    color: black;
+    margin: 0 15px;
+}
+.chat-area  header span{
+    font-size: 17px;
+    font-weight: 500;
+}
+.chat-box{
+    height: 500px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgba(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgba(0 0 0 / 5%);
+    
+}
+.chat-box .chat p{
+    padding: 8px 16px;
+    box-shadow: inset 0 32px 32px -32px rgba(0 0 0 / 5%),
+    inset 0 -32px 32px -32px rgba(0 0 0 / 5%);
+    word-wrap: break-word;
+}
+.chat-box .chat-outgoing{
+    display: flex;
+
+}
+
+.chat-outgoing .details p{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 18px 18px 0 18px;
+}
+ 
+.chat-outgoing .details{
+         margin-left: auto;
+         max-width: calc(100% - 140px);
+         margin-top: 10px;
+}  
+.chat-box .chat-incoming img{
+    height: 35px;
+    width: 35px;
+}
+.chat-box .chat-incoming{
+    display: flex;
+    align-items: flex-end;
+}
+ .chat-incoming .details{
+     background: rgba(114, 4, 81, 0.507);
+     color: rgb(10, 0, 0);
+     border-radius: 18px 18px 18px 0; 
+     text-align: center;
+
+}
+.chat-incoming .details{
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+    margin-top: 10px;
+}
+  .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content:space-between;
+}
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+}
